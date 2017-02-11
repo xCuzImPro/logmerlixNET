@@ -157,12 +157,8 @@ function clean(text) {
   bot.login(config.token);
 
 //TODO voiceChannel - MusicBot
-const Discord-DJ = require('DiscordDJ');
-var = music = new DiscordDJ();
-
-music.on('')
-
-
+const Discord-DJ = require('Discord-DJ');
+var = bot => 
 //bot.on("voice", voiceChannel)
 //bot.on("voice", voice => {
 //  let voice = member.guild
