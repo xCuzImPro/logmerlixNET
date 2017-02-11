@@ -160,8 +160,22 @@ function clean(text) {
 const Discord-DJ = require('DiscordDJ');
 var = music = new DiscordDJ();
 
-music.on('')
+music.on('ready', => {
+  console.log('DiscordDJ is ready!');
+});
 
+// play streams using ytdl-core
+const ytdl = require('ytdl-core');
+const streamOptions = { seek: 0, volume: 1 };
+const broadcast = client.createVoiceBroadcast();
+
+voiceChannel.join()
+ .then(connection => {
+   const stream = ytdl('https://www.youtube.com/watch?v=XAWgeLF9EVQ', {filter : 'audioonly'});
+   broadcast.playStream(stream);
+   const dispatcher = connection.playBroadcast(broadcast);
+ })
+ .catch(console.error);
 
 //bot.on("voice", voiceChannel)
 //bot.on("voice", voice => {
