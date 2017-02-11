@@ -1,0 +1,7 @@
+.idea
+.jshintrc
+.tern-project
+node_modules
+docs
+old
+site
